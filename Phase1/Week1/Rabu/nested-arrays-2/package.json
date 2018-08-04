@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+    "start": "node nested_array_2_convert.js",
+    "test": "mocha *.test.js"
+  }
+}

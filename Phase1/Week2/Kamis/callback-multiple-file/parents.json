@@ -1,0 +1,36 @@
+[{
+  "id": 1,
+  "first_name": "Mike",
+  "last_name": "Campbell",
+  "age": 36
+},{
+  "id": 2,
+  "first_name": "Igor",
+  "last_name": "Katsev",
+  "age": 40
+},{
+  "id": 3,
+  "first_name": "Tran",
+  "last_name": "Robin",
+  "age": 39
+},{
+  "id": 5,
+  "first_name": "Eric",
+  "last_name": "Oliver",
+  "age": 42
+},{
+  "id": 7,
+  "first_name": "Thomas",
+  "last_name": "Wood",
+  "age": 50
+},{
+  "id": 8,
+  "first_name": "Alexandra",
+  "last_name": "Bass",
+  "age": 45
+},{
+  "id": 9,
+  "first_name": "Leo",
+  "last_name": "Caldwell",
+  "age": 47
+}]

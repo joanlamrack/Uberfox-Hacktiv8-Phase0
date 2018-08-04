@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teacher</title>
+	<style>
+		table {
+		    font-family: arial, sans-serif;
+		    border-collapse: collapse;
+		    width: 100%;
+		}
+
+		td, th {
+		    border: 1px solid #dddddd;
+		    text-align: left;
+		    padding: 8px;
+		}
+
+		tr:nth-child(even) {
+		    background-color: #dddddd;
+		}
+	</style>
+</head>
+<body>
+	<h2>Teachers</h2>
+
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email</th>
+			<th>Gender</th>
+			<th>Lesson</th>
+		</tr>
+
+	<% for(let teacher of teachers){%>
+	<tr>
+		<td><%= teacher.id %></td>
+		<td><%= teacher.first_name %></td>
+		<td><%= teacher.last_name %></td>
+		<td><%= teacher.email %></td>
+		<td><%= teacher.gender %></td>
+		<td><%= teacher.lesson %></td>
+	</tr>
+	<% } %>
+
+	</table>
+</body>
+</html>

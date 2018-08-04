@@ -1,0 +1,26 @@
+{
+  "name": "express-from-scratch",
+  "version": "1.0.0",
+  "description": "buat hacktiv8 nih",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uber-fox-2018/express-from-scratch.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "joanlamrack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uber-fox-2018/express-from-scratch/issues"
+  },
+  "homepage": "https://github.com/uber-fox-2018/express-from-scratch#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}

@@ -1,0 +1,11 @@
+1. select name, location, grade_current, count(*)as totalVote 
+from Politicians join Votes on Politicians.politicianId = Votes.politicianId 
+where grade_current < 9 group by name order by totalVote ASC LIMIT 3;
+
+2. create view topThree AS select politicianId, count(*)as totalVotes from Votes group by politicianId order by totalVotes DESC LIMIT 3;
+create view politicians_votes as select * from Politicians JOIN VOTES ON Politicians.politicianId = Votes.politicianId where Politicians.politicianId in (select topThree.politicianId from topThree);
+select (first_name|| " " || last_name) as voterName, name as politiciansName, gender, totalVotes from politicians_votes join Voters join topThree ON politicians_votes.voterId = Voters.voterId AND politicians_votes.politicianId = topThree.politicianId order by totalVotes DESC, politiciansName ASC;
+
+3. select * from (select count(*) as totalVote, (Voters.first_name|| " " || Voters.last_name) as name, gender, age
+from Votes JOIN Voters ON Votes.voterId = Voters.voterId
+group by name)where totalVote > 1 order by totalVote Desc;

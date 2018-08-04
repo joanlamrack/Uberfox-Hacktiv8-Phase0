@@ -1,0 +1,11 @@
+RELEASE 0. 
+select * from Items where price BETWEEN 2000000 AND 10000000 ORDER BY price ASC;
+
+RELEASE 1. 
+select * from Customers where AGE IN(19,20,23,30) order by age asc;
+
+RELEASE 2. 
+select Customers.id, Customers.name, Customers.age, SUM(Transactions.quantity)as totalQuantity from Customers join Transactions on Customers.id = Transactions.customerId group by Customers.id order by totalQuantity DESC;
+
+RELEASE 3.
+select distinct age from Customers order by age ASC;

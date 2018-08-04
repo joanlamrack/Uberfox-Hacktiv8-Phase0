@@ -1,0 +1,12 @@
+{
+  "name": "countdown_timer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Riza Fahmi <rizafahmi@gmail.com> (https://rizafahmi.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "2.3.1",
+    "clear": "0.0.1",
+    "figlet": "1.2.0"
+  }
+}

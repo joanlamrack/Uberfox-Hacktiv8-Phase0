@@ -1,0 +1,28 @@
+<%-include("head"); %>
+<%-include("navbar"); %>
+<div class="table-responsive">
+		<table class="table table-hover">
+			<tr>
+				<td>First Name</td>
+				<td><%=studentData.firstName%></td>
+			</tr>
+			<tr>
+				<td>Last Name</td>
+				<td><%=studentData.lastName%></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><%=studentData.email%></td>
+			</tr>
+		</table>
+</div>
+<form action="" method=POST>
+	<select name="SubjectId" class="form-control">
+		<%for(let subject of subjects){  %>
+			<option value="<%=subject.id%>"> <%=subject.subjectName%> </option>
+		<% } %>
+	</select>
+	<button type="submit" class="btn-full btn btn-primary">Submit</button>
+</form>
+
+<%- include("bottom");%>

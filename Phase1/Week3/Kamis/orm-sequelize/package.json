@@ -1,0 +1,29 @@
+{
+  "name": "orm-sequelize",
+  "version": "1.0.0",
+  "description": "untuk hacktiv8 project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uber-fox-2018/orm-sequelize.git"
+  },
+  "keywords": [
+    "sequelize"
+  ],
+  "author": "joanlamrack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uber-fox-2018/orm-sequelize/issues"
+  },
+  "homepage": "https://github.com/uber-fox-2018/orm-sequelize#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cli-table": "^0.3.1",
+    "pg": "^7.4.3",
+    "sequelize": "^4.38.0",
+    "sequelize-cli": "^4.0.0"
+  }
+}

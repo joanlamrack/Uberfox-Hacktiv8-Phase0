@@ -1,0 +1,75 @@
+<%- include("head"); %>
+
+<h1>Library</h1>
+
+<%- include("navbar"); %>
+<div class="form">
+	<h3>Add a Book </h3>
+	<%if(err){%>
+		<div class="alert alert-danger" role="alert">
+			<%=err%>
+		</div>
+	<%}%>
+	<form action="" method=POST>
+			<div class="form-group">
+				<label for="title">
+					Title
+				</label>
+				<input id="" class="form-control" type="text" name="title" value="">
+			</div>
+			<div class="form-group">
+				<label for="description">
+					Description
+				</label>
+				<input id="" class="form-control" type="text" name="description" value="">
+			</div>
+			<div class="form-group">
+				<label for="author">
+					Author
+				</label>
+				<input id="" class="form-control" type="text" name="author" value="">
+			</div>
+		<button type="submit" class="btn-full btn btn-primary">Submit</button>
+	</form>
+</div>
+
+<div class="table-responsive">
+		<table class="table table-hover">
+			<tr>
+				<th>No.</th>
+				<th>Title.</th>
+				<th>Description</th>
+				<th>Author</th>
+				<th>Available To Borrow</th>
+				<th>Actions</th>
+			</tr>
+			<% bookList.forEach(b=>{ %>
+			<tr>
+
+				
+					<tr>
+					<td><%=b.id%></td>
+					<td><%=b.title%></td>
+					<td><%=b.desciption%></td>
+					<td><%=b.author%></td>
+
+					<% let available = (b.availableToBorrow ? "Yes":"No") %>
+					<td><%=available%></td>
+
+				
+				<td>
+					<a href="/books/<%=b.id%>/edit">
+						<button type="button" class="btn btn-default good">Edit</button>
+					</a>
+
+					<a href="/books/<%=b.id%>/delete">
+						<button type="button" class="btn btn-default warning">Delete</button>
+					</a>
+				</td>
+			</tr>
+			<% }) %>
+
+		</table>
+</div>
+
+<%- include("bottom"); %>

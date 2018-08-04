@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+    "start": "node binary.js",
+    "test": "mocha binary.test.js"
+  }
+}

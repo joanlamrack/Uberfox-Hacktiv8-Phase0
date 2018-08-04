@@ -1,0 +1,27 @@
+{
+  "name": "live-code-week-4",
+  "version": "1.0.0",
+  "description": "Challenge kali ini adalah membuat aplikasi perpustakaan sederhana menggunakan **Express** and **Sequelize**. Baca tiap *specification* dengan baik, ikuti apa yang diminta.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uber-fox-2018/live-code-week-4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uber-fox-2018/live-code-week-4/issues"
+  },
+  "homepage": "https://github.com/uber-fox-2018/live-code-week-4#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "pg": "^7.4.3",
+    "sequelize": "^4.38.0",
+    "sequelize-cli": "^4.0.0"
+  }
+}

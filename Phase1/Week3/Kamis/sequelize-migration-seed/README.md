@@ -1,0 +1,1 @@
+# sequelize-migration-seed

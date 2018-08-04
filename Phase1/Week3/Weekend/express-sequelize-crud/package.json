@@ -1,0 +1,31 @@
+{
+  "name": "express-sequelize-crud",
+  "version": "1.0.0",
+  "description": "Express+ Sequelize + CRUD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uber-fox-2018/express-sequelize-crud.git"
+  },
+  "keywords": [
+    "express",
+    "sequelize",
+    "crud"
+  ],
+  "author": "joanlamrack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uber-fox-2018/express-sequelize-crud/issues"
+  },
+  "homepage": "https://github.com/uber-fox-2018/express-sequelize-crud#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "pg": "^7.4.3",
+    "sequelize": "^4.38.0",
+    "sequelize-cli": "^4.0.0"
+  }
+}

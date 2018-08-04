@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=title %> Data</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/viewal.css">
+	<link rel="stylesheet" href="/css/all.min.css">
+</head>
+<body>
+<div id="main">
+	<h2><%=title %> Data</h2>
+	<h3><a href="/<%=`${obj.toLowerCase()}s`%>/add">Add <%=obj %></a></h3>
+	<div class="table-responsive">
+		<table class="table table-hover">
+			<tr>
+				<% for (let key in listdata[0]){ %> 
+					<% if (key !== "createdAt" && key!== "updatedAt" && key !== "SubjectId" ){ %>
+						<th> <%=key.split("_").map(s=>s.replace(/^[a-z]/i,(match,string)=>match.toUpperCase())).join(" ") %> </th>
+					<% } %>
+				<% } %>
+				<th>Options</th>
+			</tr>
+
+			<% for(let data of listdata){%>
+			<tr>
+				<% for (let datasection in data){ %>
+					<% if (datasection !== "createdAt" && datasection!== "updatedAt" && datasection !== "SubjectId") { %>
+						<%if(datasection !== "Subject" && datasection !== "Teachers") { %>
+						<td> <%=data[datasection]%> </td>
+						<% }else if(datasection !== "Teachers"){ %>
+							<%if (data[datasection]){%>
+							<td> <%=data[datasection].subjectName%> </td>
+							<% } else {%>
+							<td> Unassigned </td>
+							<% }%>
+						<% }else if(typeof data[datasection] === "object" && data[datasection].length){%>
+						<td> <%=data[datasection].map((t, index)=>`${index+1}. ${t.getFullName()}`).join("\n")%> </td>
+						<%} else {%>
+						<td> No Teachers </td>
+						<% } %>
+					<% } %>
+				<% } %>
+				<td>
+					<a href="/<%=`${obj.toLowerCase()}s`%>/edit/<%=data.id%>">
+						<button type="button" class="btn btn-default good">Edit</button>
+					</a>
+
+					<a href="/<%=`${obj.toLowerCase()}s`%>/delete/<%=data.id%>">
+						<button type="button" class="btn btn-default warning">Delete</button>
+					</a>
+				</td>
+			</tr>
+			<% } %>
+
+		</table>
+	</div>
+</div>	
+</body>
+</html>

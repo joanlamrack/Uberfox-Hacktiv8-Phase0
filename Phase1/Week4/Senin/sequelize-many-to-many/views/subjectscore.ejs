@@ -1,0 +1,30 @@
+<%-include("head"); %>
+<%-include("navbar"); %>
+
+<h1><%=subjectName%></h1>
+
+<div class="table-responsive">
+		<table class="table table-hover">
+			<tr>
+				<th>Name</th>
+				<th>Score</th>
+				<th>Grade</th>
+			</tr>
+		<% for(let student of studentAndScores) { %>
+			<tr>
+				<td><%=student.name%></td>
+				<% if(!student.score){ %>
+					<td><a href="/subjects/12/enrolled-students/<%=student.id%>/give-score">Give Score</a></td>
+					<td>No Grade</td>
+				<% } else{ %>
+					<td><%=student.score%></td>
+					<td><%=helper(student.score)%></td>
+				<% } %>
+				
+				
+			</tr>
+		<% } %>
+			
+		</table>
+</div>
+<%- include("bottom");%>

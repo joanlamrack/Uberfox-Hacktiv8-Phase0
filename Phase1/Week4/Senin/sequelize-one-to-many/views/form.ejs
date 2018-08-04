@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=action%> <%=section %>s Data</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+</style>
+</head>
+<body>
+	<div id="main">
+		<div></div>
+		<div class="form">
+			<h3><%=action%> <%=section %> Data </h3>
+			<%if(err){%>
+				<div class="alert alert-danger" role="alert">
+					<%=err%>
+				</div>
+			<%}%>
+			<form action="<%=actionurl%>" method=POST>
+				<% for (let keyIndex in keys) {%>
+					<% if (keys[keyIndex] !== "createdAt" && keys[keyIndex]!== "updatedAt" && keys[keyIndex] !== "id") { %>
+					<div class="form-group">
+						<label for="<%=keys[keyIndex]%>"> 
+							<%=keys[keyIndex].split("_").map(s=>s.replace(/^[a-z]/i,(match,string)=>match.toUpperCase())).join(" ") %>		
+						</label>
+					
+						<input id="<%=keys[keyIndex]%>" class="form-control" type="text" name="<%=keys[keyIndex]%>" value="<%=value[keyIndex]%>">
+					</div>
+					<% } %>
+				<% } %>
+				<button type="submit" class="btn-full btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>	
+</body>
+</html>
