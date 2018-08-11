@@ -1,22 +1,16 @@
-class MainHelper{
-	constructor(){
+class MainHelper {
+	constructor() {}
 
-	}
-
-	static convertFromGrade(score){
-		if(!score){
+	static convertFromGrade(score) {
+		if (!score) {
 			return "";
-		}
-		else if(score>85){
+		} else if (score > 85) {
 			return "A";
-		}
-		else if(score > 70){
+		} else if (score > 70) {
 			return "B";
-		}
-		else if(score > 55){
+		} else if (score > 55) {
 			return "C";
-		}
-		else if(score<=55 && score>=0){
+		} else if (score <= 55 && score >= 0) {
 			return "E";
 		}
 	}

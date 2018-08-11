@@ -13,31 +13,33 @@ module.exports = {
       }], {});
     */
 
-		return queryInterface.bulkInsert("Books", [
-			{
-				title: "Doraemon",
-				desciption: "just a comic",
-				author: "Fujiko F Fujio",
-				createdAt:new Date,
-				updatedAt:new Date
-			},
-			{
-				title: "Kingdom Of Hearts",
-				desciption: "just a comic",
-				author: "Masako",
-				createdAt:new Date,
-				updatedAt:new Date
-			},
-			{
-				title: "Kisah Sukses daya melewati live code phase 1",
-				desciption: "Biografi saya",
-				author: "Joan Lamrack",
-				createdAt:new Date,
-				updatedAt:new Date
-			},
-		], {});
-
-
+		return queryInterface.bulkInsert(
+			"Books",
+			[
+				{
+					title: "Doraemon",
+					desciption: "just a comic",
+					author: "Fujiko F Fujio",
+					createdAt: new Date(),
+					updatedAt: new Date()
+				},
+				{
+					title: "Kingdom Of Hearts",
+					desciption: "just a comic",
+					author: "Masako",
+					createdAt: new Date(),
+					updatedAt: new Date()
+				},
+				{
+					title: "Kisah Sukses daya melewati live code phase 1",
+					desciption: "Biografi saya",
+					author: "Joan Lamrack",
+					createdAt: new Date(),
+					updatedAt: new Date()
+				}
+			],
+			{}
+		);
 	},
 
 	down: (queryInterface, Sequelize) => {
@@ -49,6 +51,6 @@ module.exports = {
       return queryInterface.bulkDelete('Person', null, {});
     */
 
-  	 return queryInterface.bulkDelete('Books', null, {});
+		return queryInterface.bulkDelete("Books", null, {});
 	}
 };
